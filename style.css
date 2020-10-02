@@ -1,0 +1,63 @@
+.feeds-class {
+    display: flex;
+    margin-left: 5px;
+}
+
+.mission-class {
+    max-width: 30%;
+    margin-right: 15px;
+}
+
+.mission-class h1 {
+    font-family: 'Caveat', cursive;
+    color: blue;
+}
+
+.vision-class {
+    max-width: 30%;
+    margin-right: 15px;
+}
+
+.vision-class h1 {
+    font-family: 'Caveat', cursive;
+    color: blue;
+}
+
+.vision-class p {
+    font-family: 'Miriam Libre', sans-serif;
+}
+
+.mission-class p {
+    font-family: 'Miriam Libre', sans-serif;
+}
+
+.cont {
+    font-family: 'Caveat', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.in-touch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.in-touch img {
+    margin: 10px 10px;
+    width: 50px;
+    height: 50px;
+}
+
+header h2 {
+    font-family: 'Caveat', cursive;
+    max-width: 100px;
+}
+
+@media (max-width:820px) {
+    .feeds-class {
+        display: block;
+        margin-left: 5px;
+    }
+}

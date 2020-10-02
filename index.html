@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talai High School</title>
+    <link rel="stylesheet" href="header2.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Miriam+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Custom script-->
+    <script src="js/scripts.js"></script>
+    <style>
+        /** {
+            padding: 0;
+            margin: 0;
+            box-sizing: initial;
+        }*/
+        
+        .slider {
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .slides {
+            width: 500%;
+            height: 500px;
+            display: flex;
+        }
+        
+        .slides input {
+            display: none;
+        }
+        
+        .slides img {
+            width: 100%;
+            height: 550px;
+        }
+        
+        .slide {
+            width: 20%;
+            transition: 2s;
+        }
+        /*manual slide scroll*/
+        
+        .navigation-manual {
+            position: absolute;
+            width: 100%;
+            margin-top: -100px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .manual-btn {
+            border: 2px solid #40D3dc;
+            padding: 5px;
+            cursor: pointer;
+            transition: 1s;
+            border-radius: 10px;
+        }
+        
+        .manual-btn:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        .manual-btn:hover {
+            background: #40D3Dc;
+        }
+        
+        #radio1:checked~.first {
+            margin-left: 0;
+        }
+        
+        #radio2:checked~.first {
+            margin-left: -20%;
+        }
+        
+        #radio3:checked~.first {
+            margin-left: -40%;
+        }
+        
+        #radio4:checked~.first {
+            margin-left: -60%;
+        }
+        /*automatic scroll*/
+        
+        .navigation-auto {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: -200px;
+        }
+        
+        .navigation-auto div {
+            border: 2px solid #40D3DC;
+            padding: 3px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+        
+        .navigation-auto div:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        #radio1:checked~.navigation-auto .auto-btn1 {
+            background: #40D3Dc;
+        }
+        
+        #radio2:checked~.navigation-auto .auto-btn2 {
+            background: #40D3Dc;
+        }
+        
+        #radio3:checked~.navigation-auto .auto-btn3 {
+            background: #40D3Dc;
+        }
+        
+        #radio4:checked~.navigation-auto .auto-btn4 {
+            background: #40D3Dc;
+        }
+        
+        @media(max-width:775px) {
+            .text-box h1 {
+                font-size: 20px;
+            }
+            .text-box p {
+                color: red;
+            }
+            .in-touch img {
+                width: 10px;
+                height: 10px;
+            }
+        }
+        
+        .text-box {
+            position: absolute;
+            max-width: 600px;
+            top: 100px;
+            left: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div class="myheader">
+        <header>
+            <img src="v1.jpg" id="logo">
+            <h1>Talai High School</h1>
+            <nav>
+                <ul>
+                    <li><a class="active">Home</a></li>
+                    <li><a>Contact Us</a></li>
+                    <li><a>Admissions</a></li>
+                    <li><a>Administration</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>-->
+
+    <header class="myheader">
+        <label class="lab-class">
+            <img src="facebook.png">
+            <h2>Talai High School</h2>
+            
+        </label>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>Administration</a>
+                <!--<ul class="ul-class">
+                    <li>Teachers</li>
+                    <li>None Teachers
+                        <ul class="u2-class">
+                            <li>Kitchen</li>
+                            <li>Farm</li>
+                            <li>Dormitory</li>
+                        </ul>
+                    </li>
+                    <li>Home</li>
+                </ul>-->
+            </li>
+            <li><a>Students</a></li>
+            <li><a>Alumni</a></li>
+            <li><a>Events</a></li>
+        </ul>
+        <label class="log-class login"><a href="loginpage.html">Log in</a></label>
+        <label class="log-class sign-up"><a href="signuppage.html">Sign up</a></label>
+        <input class="searchbar" type="text" placeholder="Search this website">
+        <i class="fa fa-bars bars"></i>
+    </header>
+
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="v1.jpg" alt="violin 1">
+            </div>
+            <div class="slide">
+                <img src="v2.jpg" alt="violin 2">
+            </div>
+            <div class="slide">
+                <img src="v3.jpg" alt="violin 2">
+            </div>
+            <div class="slide">
+                <img src="viktor-jakovlev-H0vuplqoX0c-unsplash.jpg" alt="violin 2">
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <div class="text-box">
+        <h1>Success is earned</h1>
+        <p>A user/ customer goes to the website and selects something they want to buy. Proceeds with the payment and can come for the good at the supermarket. </p>
+    </div>
+    <div class="feeds-class">
+        <div class="mission-class">
+            <h1>Our Mission</h1>
+            <p>Lorem ipsum was conceived as filler text, formatted in a certain way to enable the presentation of graphic elements in documents, without the need for formal copy. Using Lorem Ipsum allows designers to put together layouts and the form of
+            </p>
+        </div>
+        <div class="vision-class">
+            <h1>Our Vision</h1>
+            <p>Lorem ipsum was conceived as filler text, formatted in a certain way to enable the presentation of graphic elements in documents, without the need for formal copy. Using Lorem Ipsum allows designers to put together layouts and the form of
+            </p>
+        </div>
+        <div class="vision-class">
+            <h1>Our Motto</h1>
+            <p>Lorem ipsum was conceived as filler text</p>
+        </div>
+    </div>
+    <h2 class="cont">Contact Us</h2>
+    <div class="in-touch">
+        <a href="https://facebook.com"><img src="facebook.png"></a>
+        <img src="whatsapp.png">
+        <img src="gmail.png">
+        <img src="twitter.png">
+    </div>
+</body>
+<script type="text/javascript">
+    var counter = 1;
+    setInterval(function() {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+            counter = 1;
+        }
+    }, 5000);
+</script>
+
+</html>
+
+</html>
