@@ -139,8 +139,10 @@ header ul li:hover>ul {
     }
     .searchbar {
         position: relative;
-        margin-top: 45px;
-        right: 10px;
+        margin-top: 55px;
+        right: 5px;
+        width: 125px;
+        place
     }
     .bars {
         margin: 10px 0;
